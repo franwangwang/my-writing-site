@@ -6,6 +6,8 @@ description: Autumn in Kyoto with my parents — the annoyances, the touching mo
 
 I'm starting this entry sitting on the chair in our second ryokan in Kyoto, overlooking the garden and sipping tea from breakfast. It's my second time staying at this ryokan, and it was older and more inconvenient that I had remembered - I must have been spoiled in the last few years :)
 
+![](/images/3-days-with-parents/ryokan.jpg)
+
 My parents and I agreed, somewhere in the summer I think, to spend a month traveling together in Japan and Thailand. The last time I spent an extended period of time with them was two summers ago when I lived at home after finishing grad school and before starting a new job, but that's different as they weren't dependent on me. The time before that was the summer prior when we traveled in Europe together with my ex, right before our wedding, but I wasn't working then, and having my ex there meant we had more space (both physical and mental). In any case, this is the longest time we've ever had traveling abroad together, and probably the longest we'll ever do - because, life, and their stamina.
 
 It's been, objectively speaking, a great trip so far. Autumn is such a gorgeous time in Kyoto, and none of us has seen fall leaves like this. We had three full days here, and except for 清水寺 and bamboo forest, I took my parents to mostly new places that I also hadn't visited before. They love making comparisons with what they can see / eat / afford in China, which is very fair, and I felt joy whenever hearing them say this is so wonderful.
