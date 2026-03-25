@@ -32,6 +32,11 @@ function readTime(body: string) {
         <>
           {i > 0 && <hr />}
           <article>
+            {essay.data.image && (
+              <a href={`/essays/${essay.slug}`} class="cover-link">
+                <img src={essay.data.image} alt={essay.data.title} class="cover" />
+              </a>
+            )}
             <div class="meta">
               <time datetime={essay.data.date.toISOString()}>{date}</time>
               <span class="read-time">{readTime(essay.body)}</span>
@@ -72,6 +77,18 @@ function readTime(body: string) {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .cover-link {
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+
+  .cover {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
   }
 
   .meta {

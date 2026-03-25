@@ -2,6 +2,7 @@
 title: Three Days with Parents
 date: 2025-11-29
 description: Autumn in Kyoto with my parents — the annoyances, the touching moments, and remembering why we're all here.
+image: /images/3-days-with-parents/ryokan.jpg
 ---
 
 I'm starting this entry sitting on the chair in our second ryokan in Kyoto, overlooking the garden and sipping tea from breakfast. It's my second time staying at this ryokan, and it was older and more inconvenient that I had remembered - I must have been spoiled in the last few years :)

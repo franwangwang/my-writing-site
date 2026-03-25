@@ -2,6 +2,7 @@
 title: Solo Spain
 date: 2025-06-26
 description: Two solo days in Barcelona, four days in Mallorca, two days in Sitges — and the strangers who made it.
+image: /images/sitges.jpg
 ---
 
 I'm starting this journal from Casa Camper in Barcelona, the hotel I'm staying at tonight. It's a cool concept where there are two rooms for the same booking, one space for sleeping staring at a vertical garden, across the hall is another space for lounging with a small terrace looking into the streets.

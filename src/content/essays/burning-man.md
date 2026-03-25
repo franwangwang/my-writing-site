@@ -2,6 +2,7 @@
 title: Burning Man
 date: 2024-09-02
 description: I am now a week back into the default world, sitting on a sun bed on the top deck of a liveaboard in the Sea of Cortez, Mexico.
+image: /images/burning-man/heart.jpg
 ---
 
 I am now a week back into the default world, sitting on a sun bed on the top deck of a liveaboard in the Sea of Cortez, Mexico. I'd just booked this trip three days before departing, which is story for another time. This is one of the more luxurious liveaboards that I've been on, which contracts dramatically with the days and nights at Burning Man, just a week ago.
