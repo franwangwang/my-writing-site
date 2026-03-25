@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const essays = (await getCollection('essays')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout title="Frances Wang">
+  <section class="bio">
+    <p>
+      Hi, I'm Frances. I write about the things I'm thinking through —
+      mental health, technology, and what it means to build something that
+      actually helps people. These essays are my way of working things out in public.
+    </p>
+  </section>
+
+  <section class="essays">
+    <h2>Essays</h2>
+    {essays.length === 0 ? (
+      <p class="empty">No essays yet — check back soon.</p>
+    ) : (
+      <ul>
+        {essays.map((essay) => {
+          const date = essay.data.date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          });
+          return (
+            <li>
+              <a href={`/essays/${essay.slug}`}>{essay.data.title}</a>
+              {essay.data.description && (
+                <p class="description">{essay.data.description}</p>
+              )}
+              <time datetime={essay.data.date.toISOString()}>{date}</time>
+            </li>
+          );
+        })}
+      </ul>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .bio {
+    margin-bottom: 3.5rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+  }
+
+  .essays h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1.75rem;
+  }
+
+  .essays ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .essays li {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .essays li:first-child {
+    border-top: 1px solid var(--border);
+  }
+
+  .essays li a {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    margin-bottom: 0.3rem;
+    transition: color 0.15s ease;
+  }
+
+  .essays li a:hover {
+    color: var(--accent);
+  }
+
+  .description {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0.2rem 0 0.4rem;
+    line-height: 1.5;
+  }
+
+  .essays time {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .empty {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+</style>

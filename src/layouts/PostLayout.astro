@@ -1,0 +1,71 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  date: Date;
+  description?: string;
+}
+
+const { title, date, description } = Astro.props;
+
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    <header class="post-header">
+      <h1>{title}</h1>
+      <time datetime={date.toISOString()}>{formattedDate}</time>
+    </header>
+    <div class="prose">
+      <slot />
+    </div>
+    <nav class="post-nav">
+      <a href="/">&larr; All essays</a>
+    </nav>
+  </article>
+</BaseLayout>
+
+<style>
+  .post-header {
+    margin-bottom: 3rem;
+  }
+
+  .post-header h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0.6rem;
+    color: var(--text);
+  }
+
+  .post-header time {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+  }
+
+  .post-nav {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+  }
+
+  .post-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .post-nav a:hover {
+    color: var(--accent);
+  }
+</style>
