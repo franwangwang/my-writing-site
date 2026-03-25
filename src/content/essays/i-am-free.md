@@ -1,7 +1,7 @@
 ---
 title: I am Free
 date: 2026-03-21
-description: Two hours ago, in the middle of F45, I saw two texts from my ex.
+description: On the same day my divorce was finalized, I told my manager I was going on medical leave. Two kinds of freedom, arriving at once.
 ---
 
 I am starting this entry sitting in our apartment, looking down Mission St.

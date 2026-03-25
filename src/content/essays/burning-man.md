@@ -1,7 +1,7 @@
 ---
 title: Burning Man
 date: 2024-09-02
-description: I am now a week back into the default world, sitting on a sun bed on the top deck of a liveaboard in the Sea of Cortez, Mexico.
+description: My first Burn — the art, the naked beer mile, a temple visit that broke me open, and why I chose this particular year to go.
 image: /images/burning-man/heart.jpg
 ---
 
