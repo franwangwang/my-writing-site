@@ -28,6 +28,7 @@ Gaia was wearing a bikini top, bare feet dangling out of the platform, with a sm
 Her partner came back with a pack of cigarettes, a weed joint, and a bottle of cava. He is indeed like a leopard as she described, charming but silent, barely spoke but made sure we were comfortable by passing me weed and cava. I haven't had weed for a while, and the joint was so good that I felt it pretty quickly. We all fell into silence and just appreciating the remaining light from the horizon, feeling comfortable or even appropriate with the silence. They invited me to dinner but Diana and Albert had found me, so I let them leave while we sat there for a bit longer until I fed ten mosquitos.
 
 ![The rocks where I met Gaia](/images/sitges.jpg)
+*The rocks where I met Gaia*
 
 ## Alan & Jamie — Luting's wedding
 
