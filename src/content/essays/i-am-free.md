@@ -1,7 +1,7 @@
 ---
 title: I am Free
 date: 2026-03-21
-description: On the same day my divorce was finalized, I told my manager I was going on medical leave. Two kinds of freedom, arriving at once.
+description: The day two things ended at once, and what that felt like.
 ---
 
 I am starting this entry sitting in our apartment, looking down Mission St.
