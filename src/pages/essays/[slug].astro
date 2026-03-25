@@ -12,12 +12,16 @@ export async function getStaticPaths() {
 
 const { essay } = Astro.props;
 const { Content } = await essay.render();
+
+const words = essay.body.trim().split(/\s+/).length;
+const readTime = `${Math.ceil(words / 200)}-ish minute read`;
 ---
 
 <PostLayout
   title={essay.data.title}
   date={essay.data.date}
   description={essay.data.description}
+  readTime={readTime}
 >
   <Content />
 </PostLayout>
