@@ -1,6 +1,7 @@
 ---
 title: Summer wrap
-date: 2026-03-27
+date: 2024-08-16
+description: An eventful summer following the biggest decision of my life.
 password: explorations
 ---
 
