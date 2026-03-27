@@ -15,6 +15,9 @@ const { Content } = await essay.render();
 
 const words = essay.body.trim().split(/\s+/).length;
 const readTime = `${Math.ceil(words / 200)}-ish minute read`;
+
+const isProtected = !!essay.data.password;
+const password = essay.data.password ?? '';
 ---
 
 <PostLayout
@@ -23,5 +26,114 @@ const readTime = `${Math.ceil(words / 200)}-ish minute read`;
   description={essay.data.description}
   readTime={readTime}
 >
-  <Content />
+  {isProtected ? (
+    <>
+      <div id="password-gate">
+        <p class="gate-prompt">This essay is private. Enter the password to read it.</p>
+        <div class="gate-form">
+          <input
+            id="password-input"
+            type="password"
+            placeholder="Password"
+            autocomplete="off"
+          />
+          <button id="password-submit">Unlock</button>
+        </div>
+        <p id="password-error" class="gate-error" aria-live="polite"></p>
+      </div>
+      <div id="protected-content" hidden>
+        <Content />
+      </div>
+    </>
+  ) : (
+    <Content />
+  )}
 </PostLayout>
+
+{isProtected && (
+  <script define:vars={{ password }}>
+    const storageKey = `unlocked:${location.pathname}`;
+
+    function unlock() {
+      document.getElementById('password-gate').hidden = true;
+      document.getElementById('protected-content').hidden = false;
+    }
+
+    if (sessionStorage.getItem(storageKey) === '1') {
+      unlock();
+    }
+
+    document.getElementById('password-submit').addEventListener('click', () => {
+      const input = document.getElementById('password-input');
+      if (input.value === password) {
+        sessionStorage.setItem(storageKey, '1');
+        unlock();
+      } else {
+        document.getElementById('password-error').textContent = 'Incorrect password.';
+        input.value = '';
+        input.focus();
+      }
+    });
+
+    document.getElementById('password-input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') document.getElementById('password-submit').click();
+    });
+  </script>
+)}
+
+<style>
+  #password-gate {
+    margin: 3rem 0;
+  }
+
+  .gate-prompt {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .gate-form {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  #password-input {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--bg);
+    color: var(--text);
+    width: 200px;
+    outline: none;
+  }
+
+  #password-input:focus {
+    border-color: var(--text-muted);
+  }
+
+  #password-submit {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--text);
+    color: var(--bg);
+    cursor: pointer;
+  }
+
+  #password-submit:hover {
+    opacity: 0.8;
+  }
+
+  .gate-error {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+    min-height: 1.2em;
+  }
+</style>
